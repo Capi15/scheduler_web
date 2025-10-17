@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: cmerbruno/custom-react:v01
+    restart: always
+    container_name: react-scheduler-web 
+    ports:
+      - "2039:80"
+    environment:
+      - REACT_APP_API_V1_AUTH_BASE_URL=${REACT_APP_API_V1_AUTH_BASE_URL}
+      - REACT_APP_API_V1_EVENTS_BASE_URL=${REACT_APP_API_V1_EVENTS_BASE_URL}
+      - REACT_APP_API_V1_REQUISITIONS_BASE_URL=${REACT_APP_API_V1_REQUISITIONS_BASE_URL}
+      - REACT_APP_API_V1_INVENTORY_BASE_URL=${REACT_APP_API_V1_INVENTORY_BASE_URL}

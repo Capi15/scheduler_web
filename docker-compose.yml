@@ -1,6 +1,7 @@
 services:
   mongo:
-    image: cmerbruno/custom-react:v01
+    build: .
+    #image: cmerbruno/custom-react:v01
     restart: always
     container_name: react-scheduler-web 
     ports:
